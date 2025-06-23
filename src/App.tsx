@@ -1,31 +1,9 @@
-import { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import "./App.css";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
-import {
-  ArrowForward,
-  Explore,
-  ShoppingBag as ShoppingBagIcon,
-} from "@mui/icons-material";
-import {
-  Box,
-  Container,
-  Typography,
-  Button,
-  CssBaseline,
-  Grid,
-  IconButton,
-  CardMedia,
-  Divider,
-  Input,
-  InputAdornment,
-  TextField,
-} from "@mui/material";
-import CountUp from "react-countup";
-import HeroSection from "./components/HeroSection";
-import NewArrivalsSection from "./components/NewArrivalsSection";
-import TopSellingSection from "./components/TopSellingSection";
+import { CssBaseline } from "@mui/material";
+
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";

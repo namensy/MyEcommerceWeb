@@ -40,10 +40,8 @@ function CartPage({}: Props) {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-  const discountPercent = 20;
-  const discount = Math.floor(subtotal * (discountPercent / 100));
   const deliveryFee = 15;
-  const total = (subtotal - discount + deliveryFee).toFixed(2);
+  const total = (subtotal + deliveryFee).toFixed(2);
 
   return (
     <Container maxWidth="xl" sx={{ py: { xs: 2, md: 4 } }}>
@@ -256,25 +254,6 @@ function CartPage({}: Props) {
                   sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
                 >
                   ${subtotal}
-                </Typography>
-              </Box>
-
-              {/* Discount */}
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  sx={{ fontSize: { xs: "0.875rem", md: "1rem" } }}
-                >
-                  Discount (-{discountPercent}%)
-                </Typography>
-                <Typography
-                  variant="h6"
-                  fontWeight={600}
-                  color="error"
-                  sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
-                >
-                  -${discount}
                 </Typography>
               </Box>
 
